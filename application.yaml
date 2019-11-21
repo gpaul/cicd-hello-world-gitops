@@ -14,7 +14,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: "gpaul/hello-world@sha256:3748856d48cfa9a770b45b57307a55f43a7947056d472c0c81bc102b5f8e9ece"
+      - image: "gpaul/hello-world@sha256:cfa236f86eda14f13ab685e31f2469fccdf6805b8480ebe226508a9b3de51c8e"
         name: hello-world
         ports:
         - containerPort: 8080
@@ -40,7 +40,7 @@ metadata:
     traefik.ingress.kubernetes.io/auth-response-headers: X-Forwarded-User
     traefik.ingress.kubernetes.io/auth-type: forward
     traefik.ingress.kubernetes.io/auth-url: http://traefik-forward-auth-kubeaddons.kubeaddons.svc.cluster.local:4181/
-    traefik.ingress.kubernetes.io/rule-type: Path
+    traefik.ingress.kubernetes.io/rule-type: Path           
   generation: 1
   labels:
     app.kubernetes.io/instance: hello-world
