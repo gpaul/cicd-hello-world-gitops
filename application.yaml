@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: hello-world
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: hello-world
@@ -14,7 +14,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: "gpaul/hello-world@sha256:84f84bfc5c07c068fdd04b333b48a81a350fcdfa7548e69456ed0b16aea9181b"
+      - image: "gpaul/hello-world@sha256:33fd05ea40cec356feb6d6daa9ce7d0b0a50ff328a4a816360e5e1eb9da2c291"
         name: hello-world
         ports:
         - containerPort: 8080
