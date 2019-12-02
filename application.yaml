@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: hello-world
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: hello-world
@@ -14,7 +14,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: "gpaul/hello-world@sha256:3748856d48cfa9a770b45b57307a55f43a7947056d472c0c81bc102b5f8e9ece"
+      - image: "gpaul/hello-world@sha256:91f7e7b5687a347727de191e9799cd74e7f5273cd707ef079784f97b753e8c12"
         name: hello-world
         ports:
         - containerPort: 8080
@@ -40,7 +40,7 @@ metadata:
     traefik.ingress.kubernetes.io/auth-response-headers: X-Forwarded-User
     traefik.ingress.kubernetes.io/auth-type: forward
     traefik.ingress.kubernetes.io/auth-url: http://traefik-forward-auth-kubeaddons.kubeaddons.svc.cluster.local:4181/
-    traefik.ingress.kubernetes.io/rule-type: Path
+    traefik.ingress.kubernetes.io/rule-type: Path           
   generation: 1
   labels:
     app.kubernetes.io/instance: hello-world
