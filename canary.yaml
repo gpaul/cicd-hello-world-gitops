@@ -28,11 +28,9 @@ spec:
     # Istio virtual service host names (optional)
     hosts:
     - app.example.com
-    # Istio traffic policy (optional)
     trafficPolicy:
       tls:
-        # use ISTIO_MUTUAL when mTLS is enabled
-        mode: DISABLE
+        mode: ISTIO_MUTUAL
     # Istio retry policy (optional)
     retries:
       attempts: 3
@@ -63,7 +61,7 @@ spec:
     # testing (optional)
     webhooks:
       - name: load-test
-        url: http://flagger-loadtester.kubeaddons/
+        url: http://flagger-loadtester/
         timeout: 5s
         metadata:
           cmd: "hey -z 1m -q 10 -c 2 http://hello-world-canary.default:80/"
