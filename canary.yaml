@@ -27,7 +27,7 @@ spec:
     - public-gateway.istio-system.svc.cluster.local
     # Istio virtual service host names (optional)
     hosts:
-    - a8a6349016ed9433b80508ff1d4c4ed7-529689160.us-west-2.elb.amazonaws.com
+    - app.example.com
     trafficPolicy:
       tls:
         mode: ISTIO_MUTUAL
