@@ -27,7 +27,7 @@ spec:
       tls:
         mode: ISTIO_MUTUAL
   progressDeadlineSeconds: 60
-    canaryAnalysis:
+  canaryAnalysis:
     interval: 1m
     maxWeight: 50
     metrics:
