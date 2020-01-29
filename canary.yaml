@@ -45,3 +45,4 @@ spec:
       name: load-test
       timeout: 5s
       url: http://flagger-loadtester.flagger/
+
