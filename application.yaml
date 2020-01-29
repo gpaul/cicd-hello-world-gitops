@@ -2,7 +2,7 @@
 # File generated from application.yaml.tmpl by the update-gitops-repo tool with arguments: /usr/bin/update-gitops-repo -verbose -git-revision=6d1a17633117c071c4179417eae108da4db15156 -force-push -substitute=imageName=gpaul/hello-world@sha256:8e06a028c49c5535513a5b048d03afd991fb027119412cc51dbf30be0ddcc457
 
 ---
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-world
